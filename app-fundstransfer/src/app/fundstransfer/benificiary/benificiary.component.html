@@ -1,0 +1,34 @@
+<mat-toolbar>
+    <span class="fill-remaining-space"></span>
+    <span>New Benificiary</span>
+    <span class="fill-remaining-space"></span>
+  </mat-toolbar>
+<form (ngSubmit)="submitPayee()" [formGroup]="payeeForm">
+          <div class="controles-container">
+            <mat-form-field>
+              <input formControlName="benificiaryName" matInput placeholder="Benificiary Name*">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="benificiaryAccountName" matInput placeholder="Benificiary Name in account*">
+                <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="bankName" matInput placeholder="Name of Bank*">
+                <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="benificiaryAccountType" matInput placeholder="Current/Savings*">
+                <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="benificiaryAccountNumber" matInput placeholder="Account Number*">
+                <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            
+            <div class="button-row">
+              <button mat-raised-button color="primary" type="submit">Submit</button>
+              <!--<button mat-raised-button color="warn" (click)="onClear()">Close</button>-->
+            </div>
+          </div>
+</form>

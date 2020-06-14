@@ -1,0 +1,194 @@
+{
+  "users": [
+    {
+      "userName": "sumit.iiit09@gmail.com",
+      "lastName": "kumar1",
+      "userEmail": "sumit.iiit09@gmail.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 12345432,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "userAddress": "Qt No - 1256 kjs kajsd",
+      "userMobile": "9910012900",
+      "id": 1,
+      "accountBalance": 64000
+    },
+    {
+      "userName": "sumit.09@gmail.com",
+      "firstName": "sumit",
+      "lastName": "kumar",
+      "userEmail": "sumit.09@gmail.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 12345432,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "userAddress": "Qt No - 1256 kjs kajsd",
+      "userMobile": "9910094399",
+      "id": 2,
+      "accountBalance": 4560000
+    },
+    {
+      "userName": "sumit@gmail.com",
+      "firstName": "sumit3",
+      "lastName": "kumar3",
+      "userMobile": "9910094333",
+      "userAddress": "House no-11, street -3",
+      "userEmail": "sumit@gmail.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 234567887,
+      "accountBalance": 23400,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "id": 3
+    },
+    {
+      "userName": "abc.xyz@gmail.com",
+      "firstName": "abc",
+      "lastName": "xyz",
+      "userMobile": "9910094444",
+      "userAddress": "House no-44, street -4",
+      "userEmail": "abc.xyz@gmail.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 98765345,
+      "accountBalance": 6789045,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "id": 4
+    },
+    {
+      "userName": "kumar.rohan@gmail.com",
+      "firstName": "rohan",
+      "lastName": "kumar",
+      "userMobile": "9911223344",
+      "userAddress": "House no-55, street -5",
+      "userEmail": "kumar.rohan@gmail.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 12345432,
+      "accountBalance": 4563456,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "id": 5
+    },
+    {
+      "userName": "sumit.09@gmail.com",
+      "firstName": "sumit",
+      "lastName": "kumar",
+      "userMobile": "9910094399",
+      "userAddress": "Qt No - 1256 kjs kajsd",
+      "userEmail": "sumit.09@hcl.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 12345432,
+      "accountBalance": 4563456,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "id": 2
+    },
+    {
+      "userName": "sumit.09@gmail.com",
+      "firstName": "sumit",
+      "lastName": "kumar",
+      "userMobile": "9910094399",
+      "userAddress": "Qt No - 1256 kjs kajsd",
+      "userEmail": "sumit.09@hcl.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 12345432,
+      "accountBalance": 4563456,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "id": 2
+    },
+    {
+      "userName": "sumit.09@gmail.com",
+      "firstName": "sumit",
+      "lastName": "kumar",
+      "userMobile": "9910094399",
+      "userAddress": "Qt No - 1256 kjs kajsd",
+      "userEmail": "sumit.09@hcl.com",
+      "userPassword": "1qaz@Wsx",
+      "accountNumber": 12345432,
+      "accountBalance": 4563456,
+      "accountType": "savings",
+      "accountStatus": "Active",
+      "id": 2
+    }
+  ],
+  "benificiaries": [
+    {
+      "benificiaryName": "friend2",
+      "benificiaryAccountName": "rohit sinha",
+      "bankName": "HDFC",
+      "benificiaryAccountNumber": "2345674567",
+      "benificiaryAccountType": "NRI",
+      "ifsc": "HDFC00010",
+      "id": 2
+    },
+    {
+      "benificiaryName": "benificiary 3",
+      "benificiaryAccountName": "abc xyz",
+      "bankName": "HDFC",
+      "benificiaryAccountNumber": "9910094444",
+      "benificiaryAccountType": "Savings",
+      "ifsc": "",
+      "id": 3
+    },
+    {
+      "benificiaryName": "rohit",
+      "benificiaryAccountName": "Rohit Singh",
+      "bankName": "CITIBank",
+      "benificiaryAccountNumber": "875447658968769",
+      "benificiaryAccountType": "savings",
+      "ifsc": "",
+      "id": 4
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "transactionDate": "2020-06-11T11:13:06.140Z",
+      "from": "sks",
+      "to": "569809784556",
+      "transactionType": "Credit",
+      "transactionAmount": 1000
+    },
+    {
+      "id": 2,
+      "transactionDate": "2020-06-09T11:13:06.140Z",
+      "from": "abc",
+      "to": "7658769898",
+      "transactionType": "Credit",
+      "transactionAmount": 1111
+    },
+    {
+      "id": 3,
+      "transactionDate": "2020-06-05T11:13:06.140Z",
+      "from": "singh",
+      "to": "467678789999",
+      "transactionType": "Debit",
+      "transactionAmount": 110
+    },
+    {
+      "id": 4,
+      "transactionDate": "2020-06-02T11:13:06.140Z",
+      "from": "tiwari",
+      "to": "4676787899990",
+      "transactionType": "Credit",
+      "transactionAmount": 1000
+    },
+    {
+      "transactionDate": "2020-06-12T12:16:47.812Z",
+      "from": "sumit.09@gmail.com",
+      "to": "9910094444",
+      "transactionType": "Debit",
+      "transactionAmount": "2000",
+      "id": 5
+    },
+    {
+      "transactionDate": "2020-06-12T12:54:26.319Z",
+      "from": "sumit.09@gmail.com",
+      "to": "875447658968769",
+      "transactionType": "Debit",
+      "transactionAmount": "1456",
+      "id": 6
+    }
+  ]
+}

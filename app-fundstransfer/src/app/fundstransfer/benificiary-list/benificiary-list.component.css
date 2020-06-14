@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+  }
+
+  /* mat-table */
+/* mat-footer-row mat-footer-cell{
+    justify-content: center;
+    font-style: italic;
+} */
+
+.footer-form{
+  width: 50%;
+  padding-left: 20%;   
+  padding-right: 20%;   
+}
+
+.controles-container > * {
+  width: 100%;
+  }

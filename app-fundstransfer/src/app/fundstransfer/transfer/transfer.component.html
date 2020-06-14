@@ -1,0 +1,33 @@
+<app-header></app-header>
+<mat-toolbar>
+    <span>Transfer Funds</span>
+</mat-toolbar>
+<mat-card class="my-card">
+    <mat-card-content>
+        <form class="my-form">
+            <mat-form-field class="full-width">
+                   <mat-label>Customer Name</mat-label>
+                   <input  matInput  placeholder="Customer Name"  name="customerName"  readonly>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                   <mat-label>Amount</mat-label>
+                   <input  matInput  placeholder="Transaction Amount" name="transactionAmount"  readonly>
+                </mat-form-field>
+                <!-- <mat-form-field class="full-width">
+                    <mat-label>Benificiary</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let benificiary of benificiaryList" [value]="benificiary.accountNumber">
+                        {{benificiary.accountName}}
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field> -->
+                <mat-form-field class="full-width">
+                   <mat-label>Remarks</mat-label>
+                   <input  matInput  placeholder="Email" name="email" readonly>
+                </mat-form-field>
+         </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- REGISTER BUTTON -->
+    </mat-card-actions>
+ </mat-card>

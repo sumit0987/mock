@@ -1,0 +1,7 @@
+.profileContainer{
+    padding: 50px;
+}
+
+.profileContainer mat-card-content > p{
+    text-decoration-color: brown;
+}
