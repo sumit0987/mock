@@ -1,0 +1,83 @@
+<app-welcome-header></app-welcome-header>
+<h1>Registration-Form</h1>
+<div class="container">
+    <form (ngSubmit)="submitRegistrationForm()" [formGroup]="registrationForm">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">User Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="userName" placeholder="Enter user name" formControlName="userName">
+      </div>
+      <div *ngIf="isSubmitted && registrationForm.controls.userName.errors" class="invalid-field">
+        <p *ngIf="registrationForm.controls.userName.errors.required">User name is required</p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="email">Email:</label>
+        </div>
+        <div class="col-75">
+          <input type="email" name="email" placeholder="Enter email Id" formControlName="email">
+        </div>
+        <div *ngIf="isSubmitted && registrationForm.controls.email.errors" class="invalid-field">
+          <p *ngIf="registrationForm.controls.email.errors.required">Email Id is required</p>
+          <p *ngIf="registrationForm.controls.email.errors.pattern">Email must belong to gmail domain</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="mobile">Mobile Number:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="mobile" placeholder="Enter Mobile No" formControlName="mobile">
+        </div>
+        <div *ngIf="isSubmitted && registrationForm.controls.mobile.errors" class="invalid-field">
+          <p *ngIf="registrationForm.controls.mobile.errors.required">Mobile no. is required</p>
+          <!-- <p *ngIf="registrationForm.controls.mobile.errors.minlength">Mobile no should be of 10 digits exactly</p>
+          <p *ngIf="registrationForm.controls.mobile.errors.maxlength">Mobile no should be of 10 digits exactly</p> -->
+          <p *ngIf="registrationForm.controls.mobile.errors.pattern">Phone number should have prefix +91 and should be exactly of 10 digits</p>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="mobile">Password:</label>
+      </div>
+      <div class="col-75">
+        <input type="password" name="userPassword" placeholder="Enter password" formControlName="userPassword">
+      </div>
+      <div *ngIf="isSubmitted && registrationForm.controls.userPassword.errors" class="invalid-field">
+        <p *ngIf="registrationForm.controls.userPassword.errors.required">Password is required</p>
+        <p *ngIf="registrationForm.controls.userPassword.errors.pattern">Password must contains one upper case, one lower case, one special character and atleast 8 characters.</p>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="password">Confirm Password:</label>
+    </div>
+    <div class="col-75">
+      <input type="password" name="confirmPassword" placeholder="Re-enter password" pattern="{{registrationForm.controls.userPassword.value}}" formControlName="confirmPassword">
+    </div>
+    <div *ngIf="isSubmitted && registrationForm.controls.confirmPassword.errors" class="invalid-field">
+      <p *ngIf="registrationForm.controls.confirmPassword.errors.required">Re enter the password</p>
+      <p *ngIf="registrationForm.controls.confirmPassword.errors.pattern"><p>Both Password and Confirm Password should be the same</p>
+    </div>
+  </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="address">Address:</label>
+        </div>
+        <div class="col-75">
+          <textarea name="address" placeholder="Enter Address.." style="height:200px" formControlName="address"></textarea>
+        </div>
+        <div *ngIf="isSubmitted && registrationForm.controls.address.errors" class="invalid-field">
+          <p *ngIf="registrationForm.controls.address.errors.required">Address is required</p>
+        </div>
+    </div>
+    
+    <div class="row">
+      <input type="submit" value="Register">
+    </div>
+    </form>
+  </div>
+

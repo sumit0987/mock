@@ -1,0 +1,54 @@
+{
+  "pets": [
+    {
+      "id": 2,
+      "petName": "abc2",
+      "petAge": "1",
+      "ownerAddress": "house number-11",
+      "ownerEmail": "abc2@hcl.com",
+      "ownerPhone": 9910094322
+    },
+    {
+      "petName": "cat",
+      "petAge": "1",
+      "ownerAddress": "Plot No, 590A, Road Number 3",
+      "ownerEmail": "sumit09@gmail.com",
+      "ownerPhone": "0970321312123",
+      "id": 3
+    },
+    {
+      "petName": "Tiger",
+      "petAge": "1",
+      "ownerAddress": "402, R.K.Nilayam, Raghvendra Colony, Kondapur",
+      "ownerEmail": "sumit.kumar@gmail.com",
+      "ownerPhone": "9910094399",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "abc",
+      "userPassword": "2"
+    },
+    {
+      "id": 2,
+      "userName": "abc2",
+      "userPassword": "1"
+    },
+    {
+      "id": 3,
+      "userName": "abc3",
+      "userPassword": "3"
+    },
+    {
+      "userName": "sumit.iiit09@gmail.com",
+      "email": "sumit.iiit09@gmail.com",
+      "mobile": "+919910094399",
+      "userPassword": "1qaz@Wsx",
+      "confirmPassword": "1qaz@Wsx",
+      "address": "Qt No - 1254\nSector-12/E",
+      "id": 4
+    }
+  ]
+}

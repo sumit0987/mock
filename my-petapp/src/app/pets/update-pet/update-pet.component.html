@@ -1,0 +1,48 @@
+<div class="formContainer">
+    <h1>Update Pet Details</h1>
+    <form (ngSubmit)="updatePet()" [formGroup]="updatePetForm">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Pet Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" value={{selectedPetData.petName}} name="petName" placeholder="Enter pet Name" formControlName="petName">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Pet Age</label>
+      </div>
+      <div class="col-75">
+        <input type="text" value={{selectedPetData.petAge}} name="petAge" placeholder="Enter pet age" formControlName="petAge">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="lname">Owner Address</label>
+        </div>
+          <div class="col-75">
+            <input type="text" name="ownerAddress" value={{selectedPetData.ownerAddress}} placeholder="Enter owner address" formControlName="ownerAddress">
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="lname">Owner Email</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="ownerEmail" value={{selectedPetData.ownerEmail}} placeholder="Enter owner email" formControlName="ownerEmail">
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="lname">Owner Phone</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="ownerPhone" value={{selectedPetData.ownerPhone}} placeholder="Enter Owner phone number" formControlName="ownerPhone">
+          </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+    </form>
+  </div>

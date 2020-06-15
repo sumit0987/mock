@@ -1,0 +1,25 @@
+<app-main-header></app-main-header>
+<h1>List of Pets</h1>
+<table id="pets">
+    <tr>
+      <th>Sl No.</th>
+      <th>Pet Name</th>
+      <th>Pet Age</th>
+      <th>Owner Address</th>
+      <th>Owner Email</th>
+      <th>Owner Phone No.</th>
+      <th>Action</th>
+    </tr>
+    <tr appRecordHighlight [color]="color" [colorMain]="colorMain" *ngFor="let pet of pets; trackBy:trackByPetId">
+       <td>{{pet.id}}</td>
+       <td>{{pet.petName}}</td>
+       <td>{{pet.petAge}}</td>
+       <td>{{pet.ownerAddress}}</td>
+       <td>{{pet.ownerEmail}}</td>
+       <td>{{pet.ownerPhone}}</td>
+       <td><button (click)="selectPet(pet)">Update</button>
+       <button (click)="deletePet(pet)">Delete</button></td>
+    </tr>
+</table>
+<hr/>
+<!-- <app-pets-detail [petObj]="selectedPet" (deletedPet)="onDelete($event)"></app-pets-detail> -->
