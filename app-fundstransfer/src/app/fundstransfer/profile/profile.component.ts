@@ -27,6 +27,10 @@ export class ProfileComponent implements OnInit {
     this.populateProfileSection();
   }
 
+  /**
+   * this function will populate the dashboard/profile with necessary account details of the 
+   * logged in user.
+   */
   populateProfileSection=()=>{
     this.sessionUser = JSON.parse(sessionStorage.getItem('user'));
     console.log(this.sessionUser);

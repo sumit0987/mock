@@ -42,6 +42,10 @@ export class BenificiaryListComponent implements OnInit {
     });
   }
 
+  /**
+   * this function selects data i.e the list of existing benificiaries for a particular account
+   * it will display list of benificiaries.
+   */
   getBenificiaryList=()=>{
     this.dataService.getData(this.baseUrl).subscribe((response: Benificiary[])=>{
       this.benificiaryList=response;
@@ -57,6 +61,10 @@ export class BenificiaryListComponent implements OnInit {
   }
 
 
+  /**
+   * generates a pop up modal having a 
+   * form for adding a new benificiary to the account
+   */
   onCreate=()=>{
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose=true;
@@ -66,6 +74,10 @@ export class BenificiaryListComponent implements OnInit {
 
   }
 
+  /**
+   * will delete the selected benificiary from the selected account
+   * @param rowId {number}
+   */
   onDelete=(rowId: number)=>{
     if(confirm('Are you sure to delete the benificiary?')){
       this.dataService.deleteData(`${this.baseUrl}/${rowId}`).subscribe((response)=>{
@@ -80,6 +92,10 @@ export class BenificiaryListComponent implements OnInit {
       }
   }
 
+  /**
+   * selectes a particular  becificiary from the benificiary list
+   * @param row {number}
+   */
   onSelect=(row: number)=>{
     console.log(row);
     this.dataService.getData(`${this.baseUrl}/${row}`).subscribe((response: Benificiary)=>{
@@ -97,6 +113,11 @@ export class BenificiaryListComponent implements OnInit {
     )
   }
 
+  /**
+   * once a beificiary is selected in the benificiary list, it will populare the 
+   * funds transfer form with some data already existing in the db
+   * @param selectedPayee {Benificiary}
+   */
   populateTransferFundsForm=(selectedPayee: Benificiary)=>{
     this.transferFundsForm.setValue({
       benificiaryName: selectedPayee.benificiaryAccountName,
@@ -105,6 +126,9 @@ export class BenificiaryListComponent implements OnInit {
     })
   }
 
+  /**
+   * submits/initiates the funds transfer process for a account
+   */
   submitFundsTransfer=()=>{
     console.log(this.transferFundsForm);
     const transaction_credit: string='Credit';
@@ -134,12 +158,17 @@ export class BenificiaryListComponent implements OnInit {
      
       console.log('updated account');
       this.updateTransactions(transactionFromObj);
+      this.updateSessionUserBalance();
     }
     else{
       alert('please verify benificiary details/account balance before proceeding');
     }
   }
 
+  /**
+   * updates the account balance once transfer amount is debited/credited to the account
+   * @param transactionAmount {number}
+   */
   updateAccountFrom=(transactionAmount)=>{
     this.sessionUser = JSON.parse(sessionStorage.getItem('user'));
     let accountFromObj = {userName: this.sessionUser[0].userName,
@@ -160,7 +189,6 @@ export class BenificiaryListComponent implements OnInit {
 
     this.dataService.updateData(`${this.baseUrl_user}/${this.sessionUser[0].id}`,accountFromObj).subscribe((response)=>{
       console.log(response);
-      
     },(error)=>{
       console.log(error);
     },() => {
@@ -169,12 +197,34 @@ export class BenificiaryListComponent implements OnInit {
     )
     //sessionStorage.setItem('user',accountFromObj);
   }
-  updateTransactions=(transactionFromObj)=>{
+  /**
+   * inserting a record in transactions table for every successful funds transfer
+   * @param transactionFromObj {Transaction}
+   * 
+   */
+  updateTransactions=(transactionFromObj: Transaction)=>{
     console.log('update transactions');
     console.log(transactionFromObj);
     this.dataService.postData(`${this.baseUrl_transaction}`,transactionFromObj).subscribe((response)=>{
       alert('Fund transferred successfully.');
       //this.getBenificiaryList();
+      //this.route.navigate(['/profile']);
+    },(error)=>{
+      console.log(error);
+    },() => {
+
+    }
+    )
+  }
+
+  updateSessionUserBalance=()=>{
+    this.sessionUser = JSON.parse(sessionStorage.getItem('user'));
+    sessionStorage.removeItem('user');
+    
+    this.dataService.getData(`${this.baseUrl_user}/?userName=${this.sessionUser[0].userName}`).subscribe((response: User)=>{
+      console.log(JSON.stringify(response));
+      console.log(response);
+      sessionStorage.setItem('user',JSON.stringify(response));
       this.route.navigate(['/profile']);
     },(error)=>{
       console.log(error);

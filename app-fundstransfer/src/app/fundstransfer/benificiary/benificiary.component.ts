@@ -18,6 +18,7 @@ export class BenificiaryComponent implements OnInit {
   baseUrl: string = `${environment.baseUrl}/benificiaries`;
   constructor(private route: Router,private dataService:CommonService, public dialogRef: MatDialogRef<BenificiaryListComponent>) { }
 
+
   ngOnInit(): void {
     this.payeeForm= new FormGroup({
       benificiaryName: new FormControl(''),
@@ -29,6 +30,10 @@ export class BenificiaryComponent implements OnInit {
     });
   }
 
+  /**
+   * submits the benificiary details from add benificiary pop up form.
+   * it validates and submits the data to the db
+   */
   submitPayee=()=>{
     console.log('submitted');
     console.log(this.payeeForm);
@@ -51,8 +56,11 @@ export class BenificiaryComponent implements OnInit {
     }
   }
 
-  onClear=()=>{
-    this.dialogRef.close();
+  /**
+   * to close the pop up window
+   */
+  onClose=()=>{
+   this.dialogRef.close();
   }
  
 

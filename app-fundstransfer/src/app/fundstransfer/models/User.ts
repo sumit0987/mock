@@ -1,3 +1,6 @@
+/**
+ * model created for a user/account record
+ */
 export interface User {
     userName: string,
     firstName: string,

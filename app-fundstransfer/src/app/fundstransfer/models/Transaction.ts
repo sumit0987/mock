@@ -1,3 +1,6 @@
+/**
+ * model created for a transaction record
+ */
 export interface Transaction {
     transactionDate: string,
     from: string,

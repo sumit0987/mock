@@ -16,6 +16,7 @@ export class CommonService {
 
   /**
    * To get data from the database
+   * @param url {string}
    */
   getData = (url) => {
     return this.httpClient.get(url);
@@ -23,6 +24,8 @@ export class CommonService {
   
   /**
    * To post/save data from the database
+   * @param url {string}
+   * @param postObj {any}
    */
   postData = (url, postObj) => {
     return this.httpClient.post(url, postObj);
@@ -30,6 +33,8 @@ export class CommonService {
   
   /**
    * To put/update data from the database
+   * @param url {string}
+   * @param putObj {any}
    */
   updateData = (url,putObj) => {
     return this.httpClient.put(url, putObj);
@@ -37,6 +42,7 @@ export class CommonService {
   
   /**
    * To delete data from the database
+   * @param url {string}
    */
   deleteData = (url) => {
     return this.httpClient.delete(url);

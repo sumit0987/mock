@@ -20,7 +20,7 @@ export class TransactionsComponent implements OnInit {
   }
 
   /**
-   * this function selects data i.e transaction list for the shopping cart
+   * this function selects data i.e transaction list for the bank account
    * it will display list of transactions.
    */
   getData=()=>{

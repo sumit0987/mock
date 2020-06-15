@@ -12,6 +12,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * logout the current users session and delete all entries from session
+   * storage
+   */
   logout=()=>{
     sessionStorage.removeItem('user');
   }
